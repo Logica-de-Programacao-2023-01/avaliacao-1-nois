@@ -14,5 +14,11 @@ package q3
 
 func DominoPieces(m, n int) (int, error) {
 	// Seu código aqui
-	return 0, nil
+	if m <= 0 || n <= 0 {
+		return 0, fmt.Errorf("tamanho errado.")
+	}
+	produto:=m*n
+	resultado:= produto/2
+	
+	return resultado, nil
 }
