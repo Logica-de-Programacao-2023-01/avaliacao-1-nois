@@ -12,7 +12,9 @@ package q2
 //
 //Ajude os amigos a encontrar o número de problemas para os quais eles escreverão uma solução.
 
-var contagem, problema int
+func ProblemsSolved(answers [][3]bool) int {
+	// Seu código aqui
+	var contagem, problema int
 	for x := 0; x < len(answers); x++ {
 		contagem = 0
 		if answers[x][0] == true {
