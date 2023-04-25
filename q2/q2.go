@@ -12,20 +12,25 @@ package q2
 //
 //Ajude os amigos a encontrar o número de problemas para os quais eles escreverão uma solução.
 
-func ProblemsSolved(answers [][3]bool) int {
-	// Seu código aqui
-	count:=0
-	for i:= 0 ; 1<len(answers); i++ {
-		soma := 0
-		for j:=0; j< 3; j++ {
-			if answers [i][j]{
-				soma++
-			}
-			
+var contagem, problema int
+	for x := 0; x < len(answers); x++ {
+		contagem = 0
+		if answers[x][0] == true {
+			contagem++
+
 		}
-		if soma >= 2 {
-			count++
+		if answers[x][1] == true {
+			contagem++
+
+		}
+		if answers[x][2] == true {
+			contagem++
+
+		}
+		if contagem >= 2 {
+			problema++
+
 		}
 	}
-	return count
+	return problema
 }
