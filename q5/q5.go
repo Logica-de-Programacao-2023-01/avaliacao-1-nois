@@ -14,7 +14,26 @@ package q5
 //
 //Ajude Pedro a lidar com esta tarefa fácil.
 
-func ProcessString(s string) string {
+ffunc ProcessString(s string) string {
 	// Seu código aqui
-	return ""
+	correta := ""
+	correta = strings.ReplaceAll(s, "A", "")
+	correta = strings.ReplaceAll(correta, "E", "")
+	correta = strings.ReplaceAll(correta, "I", "")
+	correta = strings.ReplaceAll(correta, "O", "")
+	correta = strings.ReplaceAll(correta, "U", "")
+	correta = strings.ReplaceAll(correta, "a", "")
+	correta = strings.ReplaceAll(correta, "e", "")
+	correta = strings.ReplaceAll(correta, "i", "")
+	correta = strings.ReplaceAll(correta, "o", "")
+	correta = strings.ReplaceAll(correta, "u", "")
+
+	var nova string
+	for i := 0; i < len(correta); i++ {
+		nova += "."
+		nova += string(correta[i])
+
+	}
+	minuscula := strings.ToLower(nova)
+	return minuscula
 }
