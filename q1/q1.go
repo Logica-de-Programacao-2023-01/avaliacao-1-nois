@@ -15,5 +15,24 @@ package q1
 
 func DivideWatermelon(weight int) (bool, error) {
 	// Seu código aqui
+	if weight <= 0 {
+		return false, fmt.Errorf("peso da melancia invalido.")
+	}
+	divisao := true
+	if weight%2 != 0 {
+		divisao = false
+	}
+	if weight == 2 {
+		return false, nil
+	} else if divisao == true {
+		return true, nil
+	} else if divisao == false {
+		return false, nil
+			
+	} else if weight == 2 {
+		return false, nil
+
+	}
+
 	return false, nil
 }
