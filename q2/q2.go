@@ -14,5 +14,25 @@ package q2
 
 func ProblemsSolved(answers [][3]bool) int {
 	// Seu código aqui
-	return 0
+	var contagem, problema int
+	for x := 0; x < len(answers); x++ {
+		contagem = 0
+		if answers[x][0] == true {
+			contagem++
+
+		}
+		if answers[x][1] == true {
+			contagem++
+
+		}
+		if answers[x][2] == true {
+			contagem++
+
+		}
+		if contagem >= 2 {
+			problema++
+
+		}
+	}
+	return problema
 }
